@@ -3,6 +3,7 @@
 }
 
 body {
+  padding-top: 4rem;
   margin: 0;
   color: #333;
   --type-first: Helvetica, Arial, sans-serif;
@@ -34,11 +35,16 @@ button, input {
   display: block;
   font-size: 1rem;
   font-family: var(--type-first);
-  color: #eee;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
   max-width: 50rem;
   padding: 0 1rem;
   margin: 0 auto;
+  border: 1px solid red;
 }
