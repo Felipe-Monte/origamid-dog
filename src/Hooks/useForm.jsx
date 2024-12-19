@@ -1,17 +1,20 @@
 import React from 'react';
 
+//Definindo types para verificação de error dos Inputs
 const types = {
   email: {
     regex:
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-    message: 'Preencha um email válido',
+    message: 'Preencha com email válido',
   },
 };
 
+//Recebe o type de input para verificar, nessa caso "email"
 const useForm = (type) => {
   const [value, setValue] = React.useState('');
   const [error, setError] = React.useState(null);
 
+  //Validando caso value esteja vazio, se não existe ou se nao atende ao regex
   function validate(value) {
     if (type === false) return true;
     if (value.length === 0) {
@@ -26,11 +29,13 @@ const useForm = (type) => {
     }
   }
 
+  //Verificação apenas se não existir error
   function onChange({ target }) {
-    if(error) validate(target.value)
+    if (error) validate(target.value);
     setValue(target.value);
   }
 
+  //Exportando todas as funções para serem usadas no Input
   return {
     value,
     setValue,
