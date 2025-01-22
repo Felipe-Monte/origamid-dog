@@ -7,6 +7,10 @@ const types = {
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
     message: 'Preencha com email válido',
   },
+  password: {
+    regex: /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/,
+    message: 'A senha deve conter letra maiúscula, minúscula, número, especial e 8 caracteres!'
+  }
 };
 
 //Recebe o type de input para verificar, nessa caso "email"
