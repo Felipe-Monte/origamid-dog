@@ -1,8 +1,8 @@
 import React from 'react';
-import Home from './Components/Home';
-import Login from './Components/Login/Login';
-import Header from './Components/Header';
-import Footer from './Components/Footer';
+import Home from './components/Home';
+import Login from './components/Login/Login';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { UserStorage } from './UserContext';
 
